@@ -19,6 +19,7 @@
                 <br />
                 <ul class="list-group">
                     <li class="list-group-item" v-for="(song, index) in songs">
+                        <button type="button" class="btn" :class="{'btn-warning' : song.favorite }" @click="toggleFavorite(index)">Fav</button>
                         {{ song.artist }} - {{ song.title }}
                         <button type="button" class="btn btn-danger" @click="deleteSong(index)">X</button>
                     </li>
